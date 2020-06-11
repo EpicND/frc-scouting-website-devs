@@ -5,6 +5,7 @@
 <head>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel=stylesheet href="test.css">
 </head>
 
 <body>
@@ -13,7 +14,34 @@
         <span class="mdc-button__label">Material Button</span>
     </button>
 
+    <center>
+        <table  class="sortable" id="table">
+        <thead>
+          <tr class="theader">
+            <th class="inline-centering, sorttable_numeric" id="teamRanks">Rank</th>
+            <th class = "inline-centering, sorttable_alpha" id="teamNames"> Team Name </th>
 
+            <th class="sorttable_numeric"> Auto </th>
+            <th class="sorttable_numeric"> teleOP </th>
+            <th class="sorttable_numeric"> Win Rate  </th>
+            <th class="sorttable_numeric, inline-collapsable">Avg # of Balls (Bottom) </th>
+            <th class="sorttable_numeric, inline-collapsable">Avg # of Balls (Outer) </th>
+            <th class="sorttable_numeric, inline-collapsable">Avg # of Balls (Inner) </th>
+
+
+
+          </tr>
+          <tbody id="table-items">
+
+          </tbody>
+
+        </thead>
+        <tbody id = "table-items">
+
+        </tbody>
+
+  </table>
+  </center>
 
 
 
@@ -25,6 +53,7 @@
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
 
 <script>
   // Your web app's Firebase configuration
@@ -42,6 +71,10 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
+
+
+    <script src="test.js"> </script>
 </body>
 
 <script>
