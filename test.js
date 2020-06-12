@@ -2,9 +2,9 @@ console.log("ok");
 
 var db = firebase.database();
 
-gamer(2020, "2020mndu");
+testFunc(2020, "2020mndu");
 
-function gamer(year, eKey) {
+function testFunc(year, eKey) {
 db.ref("/"+ year + "/" + eKey).once('value').then(function(snapshot) {
   console.log(snapshot.val());
   var teams = snapshot.val();

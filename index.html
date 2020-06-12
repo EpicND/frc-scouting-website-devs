@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <button class="mdc-button foo-button">
+    <button class="mdc-button foo-button" id="button">
         <div class="mdc-button__ripple"></div>
         <span class="mdc-button__label">Material Button</span>
     </button>
@@ -79,6 +79,7 @@
 
 <script>
     mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
+  document.getElementById('button').on('click', () => {testFunc(2018, "2018mndu")})
 </script>
 
 </html>
