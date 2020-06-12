@@ -2,11 +2,31 @@ console.log("ok");
 
 var db = firebase.database();
 
-gamer(2020, "2020mndu");
 
-function gamer(year, eKey) {
-db.ref("/"+ year + "/" + eKey).once('value').then(function(snapshot) {
-  console.log(snapshot.val());
+var dbref;
+
+getData(2019, "2019mndu");
+
+
+function getData(year, eKey) {
+  console.time();
+  dbref = `/${year}/${eKey}`
+  db.ref(dbref).once('value').then(function(snapshot) {
+    // console.log(snapshot.val());
+    // var teams = snapshot.val();
+    // var length = Object.keys(teams).length;
+    testFunc(snapshot)
+  })
+
+}
+
+function testFunc(snapshot) {
+
+
+  
+  
+// db.ref(dbref).once('value').then(function(snapshot) {
+  // console.log(snapshot.val());
   var teams = snapshot.val();
   var length = Object.keys(teams).length;
 
@@ -14,9 +34,32 @@ db.ref("/"+ year + "/" + eKey).once('value').then(function(snapshot) {
   var team = Object.keys(teams)[i];
 
   var currentTeam = teams[team];
-  console.log(currentTeam);
+  console.log(currentTeam)
+  // console.log(currentTeam);
+  
+
+  if(document.getElementById(`${team}`)){
+    var rank = document.getElementById(`${team}-rank`);
+    var teamNames = document.getElementById(`${team}-name`);
+    var avgs = document.getElementById(`${team}-avgs`);
+    var wlrec = document.getElementById(`${team}-wlrec`);
+    var autoScores = document.getElementById(`${team}-autoScores`);
+    var tOPScores = document.getElementById(`${team}-tOPScores`);
+    var outerNums = document.getElementById(`${team}-outerNums`);
+    var innerNums = document.getElementById(`${team}-innerNums`);
+    var bottomNums = document.getElementById(`${team}-bottomNums`);
+
+    rank.innerHTML = 1.;
+  teamNames.innerHTML = team;
+    autoScores.innerHTML = currentTeam.averages.autoAvg;
+    tOPScores.innerHTML = currentTeam.averages.tOPAvg;
+    wlrec.innerHTML = currentTeam.wltratio;
+    innerNums.innerHTML = currentTeam.averages.innerAvg;
+    outerNums.innerHTML = currentTeam.averages.outerAvg;
+    bottomNums.innerHTML = currentTeam.averages.bottomAvg;
 
 
+  } else {
 
   var tr = document.createElement('tr');
   var rank = document.createElement('td');
@@ -28,6 +71,17 @@ db.ref("/"+ year + "/" + eKey).once('value').then(function(snapshot) {
   var outerNums = document.createElement('td');
   var innerNums = document.createElement('td');
   var bottomNums = document.createElement('td');
+
+  tr.setAttribute('id', `${team}`)
+  rank.setAttribute('id', `${team}-rank`)
+  teamNames.setAttribute('id', `${team}-name`)
+  avgs.setAttribute('id', `${team}-avgs`)
+  wlrec.setAttribute('id', `${team}-wlrec`)
+  autoScores.setAttribute('id', `${team}-autoScores`)
+  tOPScores.setAttribute('id', `${team}-tOPScores`)
+  outerNums.setAttribute('id', `${team}-outerNums`)
+  innerNums.setAttribute('id', `${team}-innerNums`)
+  bottomNums.setAttribute('id', `${team}-bottomNums`)
 
   outerNums.classList.toggle("inline-collapsable");
   innerNums.classList.toggle("inline-collapsable");
@@ -60,10 +114,11 @@ db.ref("/"+ year + "/" + eKey).once('value').then(function(snapshot) {
   innerNums.innerHTML = currentTeam.averages.innerAvg;
   outerNums.innerHTML = currentTeam.averages.outerAvg;
   bottomNums.innerHTML = currentTeam.averages.bottomAvg;
-
   }
+  }
+  console.timeEnd();
 
-});
+// });
 }
 
 
@@ -135,4 +190,10 @@ function putItems() {
         $('.makeEpicAppear').fadeIn(500);
 
         clear();
+
 }
+
+db.ref(dbref).on('value', (snapshot) => {
+  console.log('change')
+  testFunc(snapshot)
+})
