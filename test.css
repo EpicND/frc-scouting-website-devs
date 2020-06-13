@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 html, body {
   margin: 0;
-  background-color: #121212;
+
 }
 
 .header {
   display:flex;
   width:100%;
-  background-color: black;
+  background-color: #121212;
 }
+
 
 .headerSpace {
   flex-grow:3;
@@ -42,6 +44,14 @@ html, body {
   text-align: center;
   font-size: 13vw;
   font-family: 'Tomorrow', sans-serif;
+  color: white;
+}
+
+.subtitle {
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Montserrat', sans-serif;
   color: white;
 }
 
@@ -97,4 +107,55 @@ html, body {
   50% {
     color: white;
   }
+}
+
+.green {
+  color: green !important;
+}
+
+.other-services:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sv {
+  float: left;
+  width: 40px;
+  padding: 5px;
+  height:40px;
+}
+
+.sv img {
+  height:40px;
+}
+
+.vertical-space {
+  height:20px;
+}
+
+.l-space {
+  margin:0;
+  padding:0;
+  width: calc(50vw - 110px) !important;
+  height:50px !important;
+}
+body {
+  margin:0;
+  font:normal 75% Arial, Helvetica, sans-serif;
+}
+canvas{
+  display: block;
+  vertical-align: bottom;
+}
+#particles-js{
+  z-index:-1;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
