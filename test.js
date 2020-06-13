@@ -39,6 +39,8 @@ function testFunc(snapshot) {
   
 
   if(document.getElementById(`${team}`)){
+
+
     var rank = document.getElementById(`${team}-rank`);
     var teamNames = document.getElementById(`${team}-name`);
     var avgs = document.getElementById(`${team}-avgs`);
@@ -49,8 +51,12 @@ function testFunc(snapshot) {
     var innerNums = document.getElementById(`${team}-innerNums`);
     var bottomNums = document.getElementById(`${team}-bottomNums`);
 
+    if(autoScores.innerHTML !== currentTeam.averages.autoAvg) {
+      autoScores.classList.add('updated')
+    }
+
     rank.innerHTML = 1.;
-  teamNames.innerHTML = team;
+    teamNames.innerHTML = team;
     autoScores.innerHTML = currentTeam.averages.autoAvg;
     tOPScores.innerHTML = currentTeam.averages.tOPAvg;
     wlrec.innerHTML = currentTeam.wltratio;
