@@ -173,3 +173,20 @@ canvas{
 .updated {
   animation: ;
 }
+
+.ges {
+  margin-right: calc(50% - 51.010px);
+}
+
+.gfs {
+  margin-right: calc(50% - 28.82px);
+}
+
+.ohg {
+  z-index:1;
+  transition: all 0.5s ease;
+}
+
+.ohg:hover {
+  color:blue !important;
+}
