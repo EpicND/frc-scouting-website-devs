@@ -211,6 +211,18 @@ canvas{
   background-color:black;
 }
 
+.signin:hover {
+  color: blue;
+}
+
+.background-sb {
+  background-color: #121212;
+}
+
+.white {
+  color:white;
+}
+
 /* div {
   height:inherit;
 } */
