@@ -207,11 +207,10 @@ canvas{
   text-decoration: none;
 }
 
+#headerC {
+  background-color:black;
+}
+
 /* div {
   height:inherit;
 } */
-
-h3 {
-  width:100%;
-  text-align: center;
-}
