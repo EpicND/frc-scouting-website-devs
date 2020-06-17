@@ -48,6 +48,7 @@ html, body {
 }
 
 .subtitle {
+  /* margin-top: 10px; */
   width: 100%;
   text-align: center;
   font-size: 2vw;
@@ -55,6 +56,17 @@ html, body {
   color: white;
 }
 
+@media screen and (max-width: 500px) {
+  .subtitle {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 3vw;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+  }
+
+}
 
 .undl {
   -webkit-animation: 1s blink step-end infinite;
