@@ -2,9 +2,9 @@ var modal = document.querySelector(".modal");
 var trigger = document.querySelector(".trigger");
 var closeButton = document.querySelector(".close-button");
 
-function toggleModal() {
+function toggleModalFromDrawer() {
     modal.classList.toggle("show-modal");
-    console.log('toggled')
+    drawer.open = !drawer.open;
 }
 
 function windowOnClick(event) {
@@ -13,6 +13,6 @@ function windowOnClick(event) {
     }
 }
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
+trigger.addEventListener("click", toggleModalFromDrawer);
+closeButton.addEventListener("click", toggleModalFromDrawer);
 window.addEventListener("click", windowOnClick);

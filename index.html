@@ -41,7 +41,7 @@
   <aside class="mdc-drawer mdc-drawer--modal">
     <div class="mdc-drawer__header">
       <h3 class="mdc-drawer__title" src="signin.html">Dashboard</h3>
-      <h6 class="mdc-drawer__subtitle"><a href="signin.html" class="link signin">Sign In</a></h6>
+      <h6 class="mdc-drawer__subtitle trigger"><a href="javascript:void(0)"  class="link signin">Sign In</a></h6>
     </div>
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
@@ -87,7 +87,7 @@
     </header>
 
     <main class="mdc-top-app-bar--fixed-adjust">
-    </main>
+  
 
   </div>
 
@@ -117,6 +117,15 @@
 
     </div>
 
+    <!-- <button class="trigger">Sign in/Sign Up</button> -->
+<div class="modal">
+	<div class="modal-content">
+		<span class="close-button">&times;</span>
+    <h1 class="modal-text">Sign In or Sign Up</h1>
+		<div id="fb-login-ui"></div>
+	</div>
+</div>
+</main>
 
 
     <footer>
@@ -132,11 +141,15 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
 <script>
   // Your web app's Firebase configuration
@@ -159,6 +172,9 @@
 
     <script src="test.js"> </script>
     <script src="cookiemanager.js"> </script>
+
+    <link rel="stylesheet" href="styles/common.css">
+<script src="scripts/modalPopup.js"></script>
 </body>
 
 <script>
@@ -179,4 +195,41 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
 </script>
 <script src="scripts/authentication.js"></script>
 
+<script>
+	
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  var uiConfig = {
+    callbacks: {
+      signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+        // User successfully signed in.
+        // Return type determines whether we continue the redirect automatically
+        // or whether we leave that to developer to handle.
+        return true;
+      },
+      uiShown: function() {
+        // The widget is rendered.
+        // Hide the loader.
+      //   document.getElementById('loader').style.display = 'none';
+      }
+    },
+    // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+    signInFlow: 'popup',
+    signInSuccessUrl: '<url-to-redirect-to-on-success>',
+    signInOptions: [
+      // Leave the lines as is for the providers you want to offer your users.
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+      // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+    ],
+    // Terms of service url.
+    tosUrl: '<your-tos-url>',
+    // Privacy policy url.
+    privacyPolicyUrl: '<your-privacy-policy-url>'
+  };
+  
+  ui.start('#fb-login-ui', uiConfig);
+  </script>
 </html>
