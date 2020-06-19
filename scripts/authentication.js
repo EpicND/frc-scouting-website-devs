@@ -52,6 +52,7 @@ function signOut() {
 firebase.auth().onAuthStateChanged(function(user) {
   var signInText = document.getElementById('dashboard-signin');
   var accountButton = document.getElementById('dashboard-account')
+  var avatar = document.querySelector('.avatar')
   var user = firebase.auth().currentUser;
   if (user) {
     // User is signed in.
@@ -59,13 +60,15 @@ firebase.auth().onAuthStateChanged(function(user) {
     try {
       signInText.innerHTML = `${user.email}`
       accountButton.innerHTML = `${user.displayName}`
+      avatar.innerHTML = `<img class="avatar" src="${user.photoURL}">`
     } catch (e) {
       console.log(e)
     }
   } else {
     // No user is signed in.
     signInText.innerHTML = `Sign in/Sign up`;
-    accountButton.innerHTML = `Not Signed In`
+    accountButton.innerHTML = `Not Signed In`;
+    avatar.innerHTML = 'account_circle'
     // accountButton.classList.add('trigger')
     // accountButton.addEventListener('click', toggleModalFromDrawer())
   }
