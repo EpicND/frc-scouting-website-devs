@@ -45,3 +45,9 @@
     color: white;
     text-align: center;
 }
+.firebaseui-card-header, .firebaseui-card-content, .firebaseui-card-actions, ul.firebaseui-tos-list.firebaseui-tos, .firebaseui-card-footer, form   {
+    background-color: #1f1f1f;
+}
+h1.firebaseui-title {
+    color: white;
+}

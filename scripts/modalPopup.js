@@ -9,6 +9,7 @@ function toggleModalFromDrawer() {
     if(checkAuthState()){
     modal.classList.remove("show-modal")
     } else {
+    ui.start('#fb-login-ui', uiConfig);
     modal.classList.toggle("show-modal");
     drawer.open = !drawer.open;
     toggledFromDrawer = !toggleModalFromDrawer;
