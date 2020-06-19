@@ -51,3 +51,11 @@
 h1.firebaseui-title {
     color: white;
 }
+
+.avatar {
+    /* vertical-align: middle; */
+
+    width: 27.5px;
+    height: 27.5px;
+    border-radius: 50%;
+  }
