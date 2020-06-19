@@ -58,10 +58,3 @@ h1.firebaseui-title {
   input.mdl-textfield__input.firebaseui-input.firebaseui-id-email, input.mdl-textfield__input.firebaseui-input.firebaseui-id-email, input.mdl-textfield__input.firebaseui-input.firebaseui-id-new-password {
       color: white;
   }
-  .mdc-drawer{
-    background-color: #121212;
-}
-
-  .mdc-drawer__title {
-    color:White !important;
-  }
