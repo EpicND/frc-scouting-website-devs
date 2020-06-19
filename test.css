@@ -239,6 +239,12 @@ canvas{
   margin-right:28px !important;
 }
 
+.asr {
+  position: absolute;
+  right: 5px;
+  top:12px;
+}
+
 /* div {
   height:inherit;
 } */
