@@ -57,3 +57,6 @@ h1.firebaseui-title {
     height: 27.5px;
     border-radius: 50%;
   }
+  input.mdl-textfield__input.firebaseui-input.firebaseui-id-email, input.mdl-textfield__input.firebaseui-input.firebaseui-id-email, input.mdl-textfield__input.firebaseui-input.firebaseui-id-new-password {
+      color: white;
+  }
