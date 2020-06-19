@@ -45,7 +45,7 @@
     </div>
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
-        <a class="mdc-list-item mdc-list-item--activated" href="#" tabindex="0" aria-current="page">
+        <a class="mdc-list-item" href="#" tabindex="0" >
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true" src="signin.html">account_circle</i>
           <span class="mdc-list-item__text dashboard-account" id="dashboard-account" href="signin.html">My Account</span>
         </a>
@@ -87,7 +87,7 @@
     </header>
 
     <main class="mdc-top-app-bar--fixed-adjust">
-  
+
 
   </div>
 
@@ -196,7 +196,7 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
 <script src="scripts/authentication.js"></script>
 
 <script>
-	
+
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
   var uiConfig = {
     callbacks: {
@@ -231,7 +231,7 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
     // Privacy policy url.
     privacyPolicyUrl: '<your-privacy-policy-url>'
   };
-  
+
   ui.start('#fb-login-ui', uiConfig);
   </script>
 </html>
