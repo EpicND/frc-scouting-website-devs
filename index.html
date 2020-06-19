@@ -204,7 +204,8 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
         // User successfully signed in.
         // Return type determines whether we continue the redirect automatically
         // or whether we leave that to developer to handle.
-        return true;
+        toggleModalFromDrawer()
+        return false;
       },
       uiShown: function() {
         // The widget is rendered.
@@ -214,7 +215,8 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '<url-to-redirect-to-on-success>',
+    // signInSuccessUrl: '<url-to-redirect-to-on-success>',
+    CredentialHelper : firebaseui.auth.CredentialHelper.NONE,
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,

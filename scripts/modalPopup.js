@@ -6,14 +6,22 @@ var toggledFromDrawer = false;
 
 
 function toggleModalFromDrawer() {
+    if(checkAuthState()){
+    modal.classList.remove("show-modal")
+    } else {
     modal.classList.toggle("show-modal");
     drawer.open = !drawer.open;
     toggledFromDrawer = !toggleModalFromDrawer;
+    }
 }
 
 function toggleModal() {
+    if(checkAuthState()){
+    modal.classList.remove("show-modal")
+    } else {
     modal.classList.toggle("show-modal");
     toggledFromDrawer = false;
+    }
 }
 
 function windowOnClick(event) {
