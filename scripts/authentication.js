@@ -73,4 +73,3 @@ firebase.auth().onAuthStateChanged(function(user) {
     // accountButton.addEventListener('click', toggleModalFromDrawer())
   }
 });
-
