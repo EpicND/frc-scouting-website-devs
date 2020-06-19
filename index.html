@@ -30,7 +30,7 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel=stylesheet href="test.css">
-    <title> Scoultimate </title>
+    <title> Scoultimate</title>
     <!-- <link rel=stylesheet href="dropdown.css"> -->
 </head>
 
@@ -41,13 +41,13 @@
   <aside class="mdc-drawer mdc-drawer--modal">
     <div class="mdc-drawer__header">
       <h3 class="mdc-drawer__title" src="signin.html">Dashboard</h3>
-      <h6 class="mdc-drawer__subtitle trigger"><a href="javascript:void(0)"  class="link signin">Sign In</a></h6>
+      <h6 class="mdc-drawer__subtitle trigger"><a href="javascript:void(0)"  class="link signin dashboard-signin" id="dashboard-signin">Sign In</a></h6>
     </div>
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
         <a class="mdc-list-item mdc-list-item--activated" href="#" tabindex="0" aria-current="page">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true" src="signin.html">account_circle</i>
-          <span class="mdc-list-item__text" href="signin.html">My Account</span>
+          <span class="mdc-list-item__text dashboard-account" id="dashboard-account" href="signin.html">My Account</span>
         </a>
         <a class="mdc-list-item" href="#" tabindex="0">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">all_out</i>
@@ -121,7 +121,7 @@
 <div class="modal">
 	<div class="modal-content">
 		<span class="close-button">&times;</span>
-    <h1 class="modal-text">Sign In or Sign Up</h1>
+    <h1 class="modal-text ">Sign In or Sign Up</h1>
 		<div id="fb-login-ui"></div>
 	</div>
 </div>

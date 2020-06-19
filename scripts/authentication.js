@@ -1,28 +1,19 @@
-function handleSignUp() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    if (email.length < 4) {
-      alert('Please enter an email address.');
-      return;
-    }
-    if (password.length < 4) {
-      alert('Please enter a password.');
-      return;
-    }
-    // Create user with email and pass.
-    // [START createwithemail]
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // [START_EXCLUDE]
-      if (errorCode == 'auth/weak-password') {
-        alert('The password is too weak.');
-      } else {
-        alert(errorMessage);
-      }
-      console.log(error);
-      // [END_EXCLUDE]
-    });
-    // [END createwithemail]
+function readAndSetName() {
+  var signInText = document.getElementById('dashboard-signin');
+  var accountButton = document.getElementById('dashboard-account')
+  var user = firebase.auth().currentUser;
+console.log(user.photoURL)
+  if (user) {
+  // User is signed in.
+  console.log(user)
+  try {
+    signInText.innerHTML = `${user.email}`
+    accountButton.innerHTML = `${user.displayName}`
+  } catch (e) {
+    console.log(e)
   }
+  } else {
+  // No user is signed in.
+  console.log('no user')
+  }
+}
