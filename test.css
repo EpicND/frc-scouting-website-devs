@@ -243,6 +243,8 @@ canvas{
   position: absolute;
   right: 5px;
   top:12px;
+  height:48px;
+  width:48px;
 }
 
 /* div {
