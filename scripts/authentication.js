@@ -60,7 +60,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     try {
       signInText.innerHTML = `${user.email}`
       accountButton.innerHTML = `${user.displayName}`
+      if(user.photoURL){
       avatar.innerHTML = `<img class="avatar" src="${user.photoURL}">`
+      } else {
+        avatar.innerHTML = 'account_circle'
+      }
     } catch (e) {
       console.log(e)
     }
