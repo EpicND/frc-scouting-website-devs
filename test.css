@@ -58,14 +58,33 @@ html, body {
 
 @media screen and (max-width: 500px) {
   .subtitle {
-    margin-top: 10px;
+    margin-top: 20px;
     width: 100%;
     text-align: center;
     font-size: 3vw;
     font-family: 'Montserrat', sans-serif;
     color: white;
   }
+  .undl {
+    display:none;
+  }
+  .title {
+    font-size: 16vw;
+    margin-top:20px;
+  }
+  .other-services-mobile {
+      display:block !important;
+  }
+  .other-services {
+      display:none;
+  }
+  .none {
+    opacity:0;
+  }
+}
 
+.other-services-mobile {
+    display:none;
 }
 
 .undl {
@@ -149,7 +168,7 @@ html, body {
 .l-space {
   margin:0;
   padding:0;
-  width: calc(50vw - 110px) !important;
+  width: calc(50vw - 100px) !important;
   height:50px !important;
 }
 body {
