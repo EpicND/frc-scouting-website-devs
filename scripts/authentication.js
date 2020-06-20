@@ -1,10 +1,19 @@
 var dashboardSignin = document.querySelector('.trigger');
+var accountButton = document.querySelector('.dashboard-account')
 
 dashboardSignin.addEventListener('click', function() {
   if(checkAuthState()) {
     signOut()
   }
 })
+
+accountButton.addEventListener('click', function() {
+  if(checkAuthState()) {
+
+  } else {
+    toggleModalFromDrawer()
+  }
+});
 
 
 function readAndSetName() {
@@ -49,6 +58,11 @@ function signOut() {
 }
 
 
+function accountButtonHandler() {
+  console.log('clicked')
+}
+
+
 firebase.auth().onAuthStateChanged(function(user) {
   var signInText = document.getElementById('dashboard-signin');
   var accountButton = document.getElementById('dashboard-account')
@@ -70,8 +84,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
   } else {
     // No user is signed in.
-    signInText.innerHTML = `Sign in/Sign up`;
-    accountButton.innerHTML = `Not Signed In`;
+    signInText.innerHTML = `Not signed in`;
+    accountButton.innerHTML = `Sign in/Sign Up`;
     avatar.innerHTML = 'account_circle'
     // accountButton.classList.add('trigger')
     // accountButton.addEventListener('click', toggleModalFromDrawer())
