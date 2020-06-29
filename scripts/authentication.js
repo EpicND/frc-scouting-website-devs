@@ -100,7 +100,7 @@ firebase.auth().onAuthStateChanged(async function (user) {
   var accountButton = document.getElementById('dashboard-account')
   var avatar = document.querySelector('.avatar')
   var user = firebase.auth().currentUser;
-  console.log(user.uid)
+  // console.log(user.uid) 
   // user.sendEmailVerification().then(function() {
   //   // Email sent.
   // }).catch(function(error) {
