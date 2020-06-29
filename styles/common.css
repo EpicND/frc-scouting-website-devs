@@ -59,10 +59,10 @@ h1.firebaseui-title {
       color: white;
   }
 
-  label.mdl-textfield__label.firebaseui-label {
+  label.mdl-textfield__label.firebaseui-label, p.firebaseui-text {
     color: white;
 }
 
-form {
+form, .firebaseui-card-footer, .firebaseui-card-actions, .firebaseui-card-content, .firebaseui-card-header {
     background-color: #1f1f1f;
 }
