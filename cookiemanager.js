@@ -6,11 +6,11 @@ console.log(beenHereBefore);
 
 if(beenHereBefore == "error" || beenHereBefore == false) {
   console.log("ft");
-    setCookie("beenHereBefore", true, 1);
+  setCookie("beenHereBefore", true, 1);
 } else {
-  console.log("ok gamer");
   document.getElementById("gh").innerHTML = "Continue";
-    setCookie("beenHereBefore", true, 1);
+  setCookie("beenHereBefore", true, 1);
+  document.getElementById("ghs").classList.add("gfs");
 }
 
 

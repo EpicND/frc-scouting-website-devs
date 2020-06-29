@@ -82,7 +82,10 @@ html, body {
     opacity:0;
   }
   .vertical-space {
-    height: 40px !important;
+    height: 30px !important;
+  }
+  .gusty {
+    margin-top: 20px;
   }
 }
 
@@ -213,7 +216,7 @@ canvas{
 }
 
 .gfs {
-  margin-right: calc(50% - 28.82px);
+  margin-right: calc(50% - 46.98px) !important;
 }
 
 .ohg {
