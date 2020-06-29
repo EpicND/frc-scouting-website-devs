@@ -99,16 +99,6 @@
 
 
 
-
-    <div>
-      <button class="mdc-button foo-button ges gusty" id="ghs" onclick="testFunct()">
-          <div class="mdc-button__ripple"></div>
-          <span class="mdc-button__label ohg" id="gh" >Get Started</span>
-      </button>
-
-    </div>
-
-    <!-- <button class="trigger">Sign in/Sign Up</button> -->
 <div class="modal">
 	<div class="modal-content">
 		<span class="close-button">&times;</span>
@@ -162,14 +152,13 @@
 
 
     <script src="test.js"> </script>
-    <script src="cookiemanager.js"> </script>
+    <!-- <script src="cookiemanager.js"> </script> -->
 
     <link rel="stylesheet" href="styles/common.css">
 <script src="scripts/modalPopup.js"></script>
 </body>
 
 <script>
-    mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
     const list = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'))
     list.wrapFocus = true;
     function testFunct(){
