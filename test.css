@@ -58,7 +58,7 @@ html, body {
 
 @media screen and (max-width: 500px) {
   .subtitle {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     text-align: center;
     font-size: 3vw;
@@ -70,7 +70,7 @@ html, body {
   }
   .title {
     font-size: 16vw;
-    margin-top:160px;
+    margin-top:100px;
   }
   .other-services-mobile {
       display:block !important;
@@ -80,6 +80,9 @@ html, body {
   }
   .none {
     opacity:0;
+  }
+  .vertical-space {
+    height: 40px !important;
   }
 }
 
