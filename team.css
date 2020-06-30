@@ -23,16 +23,21 @@ body {
 .team-picture {
   margin-left: 40px;
   margin-top:20px;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     background-color: white;
-    height: 80px;
-    width: 80px;
-    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    /* border-radius: 5px; */
     cursor: pointer;
 }
 
 .logo-icon {
   height:60px;
   width:auto;
-  margin:10px;
+  margin:20px;
+}
+
+
+.team-picture, .gradient-wrap {
+  border-radius: 25%;
 }

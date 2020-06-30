@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
 
   <script src="https://www.googleoptimize.com/optimize.js?id=OPT-WPS9HFR"></script>
+  <script src="https://unpkg.com/grade-js@1.0.10/docs/dist/grade.js"></script>
+
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -101,7 +103,9 @@
   <div>
       <div class="team-info-left-box">
         <div class="team-picture">
-          <img class="logo-icon" src="assets/testicon.png" />
+            <div class="gradient-wrap">
+                <img class="logo-icon" src="assets/testicon.png" />
+            </div>
         </div>
         <h1> X awards</h1>
       </div>
@@ -161,7 +165,16 @@
   firebase.analytics();
 </script>
 
-
+<script type="text/javascript">
+    window.addEventListener('load', function(){
+        /*
+            A NodeList of all your image containers (Or a single Node).
+            The library will locate an <img /> within each
+            container to create the gradient from.
+         */
+        Grade(document.querySelectorAll('.gradient-wrap'))
+    })
+</script>
 
     <script src="test.js"> </script>
     <!-- <script src="cookiemanager.js"> </script> -->
