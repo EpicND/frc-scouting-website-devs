@@ -11,7 +11,7 @@ body {
 }
 
 .team_number {
-  color: white;
+  color: green;
   margin-top:20px;
   margin-right:15px;
   font-family: 'Tomorrow', sans-serif;
@@ -28,7 +28,7 @@ body {
     background-color: white;
     height: 100px;
     width: 100px;
-    /* border-radius: 5px; */
+    /* border-radius: 12%; */
     cursor: pointer;
 }
 
@@ -47,17 +47,29 @@ body {
 .team-picture, .gradient-wrap {
   height: 100px;
     /* width: auto; */
-  border-radius: 25%;
+  border-radius: 12%;
 }
 
 .teamName {
   color:white;
-  font-family: 'Montserrat', sans-serif;
-  margin-left:40px;
-  text-align: left;
+  font-family: 'Tomorrow', sans-serif;
+  width:auto;
+  /* margin-left:40px; */
+  margin-bottom:0px;
+  text-align: center;
   margin-top:30px;
   font-size: 30px;
+  width:auto;
   /* width:200px; */
+}
+
+.infobox {
+  width: 100%;
+}
+
+.location {
+  margin-top:5px;
+  text-align: center;
 }
 
 .team-info-left-box {
@@ -65,4 +77,20 @@ body {
   height:100vh;
   width:40%;
   border-right: .5px solid white;
+}
+
+.flex {
+  display: flex;
+}
+
+.infotxt {
+  width: 180px;
+    color: white;
+    text-align: center;
+    margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location {
+  color:grey;
 }
