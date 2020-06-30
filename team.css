@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
 body {
   background-color: black;
@@ -22,7 +23,7 @@ body {
 
 .team-picture {
   margin-left: 40px;
-  margin-top:20px;
+  /* margin-top:20px; */
     /* border: 2px solid gray; */
     background-color: white;
     height: 100px;
@@ -40,4 +41,21 @@ body {
 
 .team-picture, .gradient-wrap {
   border-radius: 25%;
+}
+
+.teamName {
+  color:white;
+  font-family: 'Montserrat', sans-serif;
+  margin-left:40px;
+  text-align: left;
+  margin-top:30px;
+  font-size: 30px;
+  /* width:200px; */
+}
+
+.team-info-left-box {
+  padding-top:20px;
+  height:100vh;
+  width:40%;
+  border-right: .5px solid white;
 }
