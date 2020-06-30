@@ -33,13 +33,20 @@ body {
 }
 
 .logo-icon {
-  height:60px;
+  scale: 1;
+  height:70px;
   width:auto;
-  margin:20px;
+  margin:15px;
+  border-radius: 12%;
+  -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
 }
 
 
 .team-picture, .gradient-wrap {
+  height: 100px;
+    /* width: auto; */
   border-radius: 25%;
 }
 
