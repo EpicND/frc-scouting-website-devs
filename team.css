@@ -56,8 +56,9 @@ body {
   width:auto;
   /* margin-left:40px; */
   margin-bottom:0px;
-  text-align: center;
-  margin-top:30px;
+  text-align: left;
+  margin-left:20px;
+  margin-top:20px;
   font-size: 30px;
   width:auto;
   /* width:200px; */
@@ -68,8 +69,9 @@ body {
 }
 
 .location {
+  margin-left:20px;
   margin-top:5px;
-  text-align: center;
+  text-align: left;
 }
 
 .team-info-left-box {
@@ -94,3 +96,7 @@ body {
 .location {
   color:grey;
 }
+
+/* div {
+  border: 1px solid white;
+} */
