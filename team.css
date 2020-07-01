@@ -34,9 +34,9 @@ body {
 
 .logo-icon {
   scale: 1;
-  height:70px;
+  height:80px;
   width:auto;
-  margin:15px;
+  margin:40px;
   border-radius: 12%;
   -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -45,9 +45,11 @@ body {
 
 
 .team-picture, .gradient-wrap {
-  height: 100px;
+  height: 160px;
+  width: 160px;
+
     /* width: auto; */
-  border-radius: 12%;
+  border-radius: 50%;
 }
 
 .teamName {
