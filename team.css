@@ -50,6 +50,7 @@ body {
 
     /* width: auto; */
   border-radius: 50%;
+  border: 0.2px white solid;
 }
 
 .teamName {
