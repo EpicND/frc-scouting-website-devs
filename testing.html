@@ -1,84 +1,56 @@
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="test.css">
+  <title></title>
 </head>
 
-<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+<body>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-   https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-database.js"></script>
+  <div class="grid">
+    <div class="team-logo">
+      <div class="gradient-wrap">
+        <img class="logo-icon" id="logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARtSURBVFhH7ZjfT1tlGMefFjjdAPcDYa0RpmTjAhIvJCHDxZjo5mAkTLqwxXWTsRgxM+hgXcJWaIk/okOKChj1wtgZBNeDFwvJkiXLFoyJN7tZ9EJM/Ae8YLuDwwJ9fJ73fdudnp5TSoNjUb7JJ6fnvM/7Pp+ec9oegM38H6NtIKtGO1BdiRsF95cazslb8FidDy/sL8N22tqN5wL3lxrOyUvwWK0Pb5zYghgGvBHYIvbt6laD+0sN5+QkGO/eiboifnYH3nrDI+SS3GrxoN5WjPo7NM51p4rxleoq27XMcH+p4ZwcBKsQdRdBMswPD8VSnCT6iB8JronCuglCKcCuEgCvHTz2x2fbF1KCLHCJXucgONdXSBLOkqWaVqcU8ssvQ9v0u8Puu6i7E6mzN0W8R1gFA0RScJQYkcx/4MK/LhZkyO3UtOdUm7Vn/C3t4/uxwvuJuLaSEssmeIZoI5KCV90pQcEw4OIlwNkOj5CrKPYcVq3yy9TFrV9kiAno0k5Rc6vgacIsyLXxQnGZU5KfAv7aqWH1tpIO1Sb/XOkp+txWLl4gzkaGYCdhFWS43iTItaEXoV+1yS/97e6BdDFGyanLlRIcILoIlrMT1OlsXzVJXgbsfwkGVKu1p7PJ05wupkjeUyw3RCQF3yWScknBScI6zySIEcDOek+zarmmFHQ1aYE0MWaKzh5L8eLdgIluF84Hy3F+kOglXq+QnKDXoXIS57PN9yrVm+VMXDhYEOB+sm2OaayBfRijdxyjRczwvdMjmevdjb8Fa/Ds6BX0j83g0fEZbPtqBv205X0+/nukBv+M7UUcpDn8xqx8RNBYYyXsU61zihbcD8HUTW/DbKQe2yIj2Br6BE+OxRG+WUCYMBB+WpJb2ufjPM51s2fq5S3AmNfiN3scsHcPBLmvbJ89hSOHt/akLWJhOnxANG3p+xAPnQ/jqXESJCnv9SV84ecHYgsTi+I4j3Pda1Qff/tVxKM2a6rvzfdri85xf6nhkHKAJzIWsOCPDOORwSge7OkXAh1fkuD0EtbdNvDcnQdiC9MGHdfFONcdiUTFPPTTGm+a1lNnMPnB4v5KxTGu1tqiRrNQGvQbOxd4RpyR1tBlbOoNy0scW8SSa0u4+6YhtrzPx3mc67ie5wnBoFrrPGGSO+Qt4vvQJTWyx9VcCS1ishW12N/Hy8Rl9oejD+/BGJ25OMvR9mt5D/I413F9cm5qrXa1TzT7oIX7yvY5hD9VGKLJWVgIe/BeZDt2j36HXaMT2DVmgvb5OI9znd18M2v6FPt8UGFMaob4/loVNy7rHkd43H4eQ2PfkiD9RhtDYOylvkohe3ylUJGImx6p/i2+J0n1AJEYgcQeL+xSCqunoQoaloddxgotkAOJ5ahrYTnqzhvup1rnHn5Osz5Y2rDS8NSTk2rKows/4drIWFl53lt2XU15dOG/DWxkMnj52afv8d8o64lSyJr/7n8W1gPuLzWcsymYDe4vNZzz2AtyuGij2MxmHrMA/APvH8D9fzNwCwAAAABJRU5ErkJggg==" />
+      </div>
+
+    </div>
+    <div class="awards-years">
+      <div class="vertical-flex">
+      <p class="awards">123 Awards</p>
+      <p class="years">20 Years</p>
+    </div>
+    </div>
+    <div class="header">
+      <div class="infobox">
+        <h1 class="teamName">The Cheesy Poofs</h1>
+        <h3 class="location"> San Jose, California</h3>
+    </div>
+    </div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, similique odit iste odio dignissimos quod? Placeat sed asperiores facilis, quo ad perspiciatis, voluptas atque quis exercitationem hic blanditiis non esse?</p>
+    </div>
+    <div class="footer">Footer</div>
+  </div>
+  <script src="https://unpkg.com/grade-js@1.0.10/docs/dist/grade.js"></script>
 
 
-<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      /*
+          A NodeList of all your image containers (Or a single Node).
+          The library will locate an <img /> within each
+          container to create the gradient from.
+       */
+      Grade(document.querySelectorAll('.gradient-wrap'))
 
-<script>
-// Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "AIzaSyBd-aqaxVUxTNdj6D49IPDZk2a0U_SDRl0",
-  authDomain: "frc-scouting-epicnd.firebaseapp.com",
-  databaseURL: "https://frc-scouting-epicnd.firebaseio.com",
-  projectId: "frc-scouting-epicnd",
-  storageBucket: "frc-scouting-epicnd.appspot.com",
-  messagingSenderId: "818544231802",
-  appId: "1:818544231802:web:cd625c57330f00af55c2c3",
-  measurementId: "G-JS1BSNMHJS"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+    })
+  </script>
 
+</body>
 
-</script>
-
-<button class="trigger">Sign in/Sign Up</button>
-<div class="modal">
-	<div class="modal-content">
-		<span class="close-button">&times;</span>
-		<h1>Sign In or Sign Up</h1>
-		<div id="fb-login-ui"></div>
-	</div>
-</div>
-
-<link rel="stylesheet" href="styles/common.css">
-<script src="scripts/modalPopup.js"></script>
-<script>
-	
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
-var uiConfig = {
-  callbacks: {
-    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-      // User successfully signed in.
-      // Return type determines whether we continue the redirect automatically
-      // or whether we leave that to developer to handle.
-      return true;
-    },
-    uiShown: function() {
-      // The widget is rendered.
-      // Hide the loader.
-    //   document.getElementById('loader').style.display = 'none';
-    }
-  },
-  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-  signInFlow: 'popup',
-  signInSuccessUrl: '<url-to-redirect-to-on-success>',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    // firebase.auth.PhoneAuthProvider.PROVIDER_ID
-  ],
-  // Terms of service url.
-  tosUrl: '<your-tos-url>',
-  // Privacy policy url.
-  privacyPolicyUrl: '<your-privacy-policy-url>'
-};
-
-ui.start('#fb-login-ui', uiConfig);
-</script>
+</html>
