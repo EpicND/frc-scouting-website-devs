@@ -59,7 +59,7 @@ body {
   text-align: left;
   margin-left:20px;
   margin-top:20px;
-  font-size: 30px;
+  font-size: 2.1vw;
   width:auto;
   /* width:200px; */
 }
@@ -86,7 +86,7 @@ body {
 }
 
 .infotxt {
-  width: 180px;
+  width: 100px;
     color: white;
     text-align: center;
     margin-right: 20px;
@@ -97,6 +97,17 @@ body {
   color:grey;
 }
 
+@media screen and (max-width: 767px) {
+    .team-info-left-box {
+      width:100% !important;
+      margin-right: none;
+    }
+    
+    .teamName {
+      font-size: 30px !important;
+    }
+}
+
 /* div {
-  border: 1px solid white;
+  border: .5px solid white;
 } */
