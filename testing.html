@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html page-theme="dark">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="test1.css">
   <title></title>
 </head>
 
@@ -27,12 +27,12 @@
     <div class="header">
       <div class="infobox">
         <h1 class="teamName">The Cheesy Poofs</h1>
-        <h3 class="location"> San Jose, California</h3>
+        <h3 class="location">San Jose, California</h3>
     </div>
     </div>
     <div class="sidebar">Sidebar</div>
     <div class="content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, similique odit iste odio dignissimos quod? Placeat sed asperiores facilis, quo ad perspiciatis, voluptas atque quis exercitationem hic blanditiis non esse?</p>
+      <p class="team-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, similique odit iste odio dignissimos quod? Placeat sed asperiores facilis, quo ad perspiciatis, voluptas atque quis exercitationem hic blanditiis non esse?</p>
     </div>
     <div class="footer">Footer</div>
   </div>
@@ -47,6 +47,7 @@
           container to create the gradient from.
        */
       Grade(document.querySelectorAll('.gradient-wrap'))
+      document.documentElement.setAttribute('page-theme', "light")
 
     })
   </script>
