@@ -2,12 +2,14 @@ import React from 'react';
 
 function App(props) {
     const facts = props.facts.map(fact => {
-        return <li>{fact.text}</li>
+    return <li>{fact.text} penis</li>
     })
     return (
-        <ul>
-            {facts}
-        </ul>
+        <div>
+            <ul>
+                {facts}
+            </ul>
+        </div>
     )
 }
 

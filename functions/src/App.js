@@ -15,7 +15,8 @@ function App(props) {
         return _react2.default.createElement(
             'li',
             null,
-            fact.text
+            fact.text,
+            ' penis'
         );
     });
     return _react2.default.createElement(

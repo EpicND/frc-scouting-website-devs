@@ -1,5 +1,6 @@
 import fetch from 'node-fetch'
 
 export default function getFacts(){ 
-    return fetch('https://ssr-react.firebaseio.com/facts.json').then(res => res.json())
+    return fetch('https://ssr-react.firebaseio.com/facts.json')
+        .then(res => res.json())
 }

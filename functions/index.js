@@ -47,4 +47,6 @@ app.get('/test', function (req, res) {
     });
 });
 
+app.get('/team/:teamNumber', function (req, res) {});
+
 var ssrapp = exports.ssrapp = functions.https.onRequest(app);
