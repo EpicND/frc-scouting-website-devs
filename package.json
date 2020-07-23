@@ -1,0 +1,30 @@
+{
+  "name": "scoultimatetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "node_modules/.bin/babel src -d functions/src",
+    "babel2": "node_modules/.bin/babel index.js -d functions",
+    "serve": "firebase serve --only hosting,functions"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^7.16.1",
+    "firebase-functions": "^3.8.0",
+    "node-fetch": "^2.6.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.10.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}

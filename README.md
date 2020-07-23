@@ -1,1 +1,0 @@
-# frc-scouting-website-devs
